@@ -14,7 +14,6 @@ import telebot
 from transfer_model import *
 import os
 
-print(device)
 bot = telebot.TeleBot('1563972967:AAETCK5ET3MvxQ_tWsISwwyuTB74zMHzk0U');
 
 
@@ -51,7 +50,7 @@ images = {'content': False,
 @bot.message_handler(content_types=['photo'])
 def download_photo(message):
     path = os.path.abspath(os.getcwd()).replace("\\","/") + '/img/'
-    print(path)
+
     if not images['content']:
 
         content_info = bot.get_file(message.photo[-1].file_id)

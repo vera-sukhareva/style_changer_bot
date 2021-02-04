@@ -135,7 +135,7 @@ def run_style_transfer(cnn, normalization_mean, normalization_std,
                        content_img, style_img, input_img, num_steps=200,
                        style_weight=100000, content_weight=1):
     """Run the style transfer."""
-    print('Building the style transfer model..')
+
     model, style_losses, content_losses = get_style_model_and_losses(cnn,
                                                                      normalization_mean, normalization_std, style_img,
                                                                      content_img)
@@ -167,12 +167,6 @@ def run_style_transfer(cnn, normalization_mean, normalization_std,
             loss.backward()
 
             run[0] += 1
-            if run[0] % 50 == 0:
-                print("run {}:".format(run))
-                print('Style Loss : {:4f} Content Loss: {:4f}'.format(
-                    style_score.item(), content_score.item()))
-                print()
-
             return style_score + content_score
 
         optimizer.step(closure)
