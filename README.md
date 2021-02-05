@@ -8,4 +8,8 @@ telegram: @your_style_changer_bot
 2. Send an image with a style you want to apply to the first photo;
 3. In a few minutes, the bot will send you the result.
 
+Examples:
+![Screenshot](cat.jpg)
+![Screenshot](burj_khalifa.jpg)
+
 Contacts for communication in telegram: @v_aleeva
